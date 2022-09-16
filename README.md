@@ -1,2 +1,2 @@
 # Mentoria-PicPay
-Mentoria
+## Desenvolvimento para BackEnd referente utilizando linguagens de programação "TypeScript"
