@@ -57,6 +57,9 @@ Recomenda-se utilizar sistema Linux ou macOS.
   - Executar comando `nvm install node`
   - Executar comando `node -v` para verificar instalação
   - Executar comando `npm -v` para verificar instalação
+- Instalar Typescript globalmente:
+  - Executar comando `npm i -g typescript`
+  - Executar comando `tsc -v` para verificar instalação
 - Instalar [Yarn](https://yarnpkg.com/) globalmente:
   - Executar comando `npm i -g yarn`
   - Executar comando `yarn -v` para verificar instalação
