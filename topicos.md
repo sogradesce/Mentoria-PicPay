@@ -68,7 +68,8 @@ Após ter instalado essas ferramentas, na raiz desse repositório faça os segui
 
 - Execute `yarn init` e aguarde a inicialização (diversos arquivos serão criados)
 - Execute `yarn add --dev typescript`
-- Crie um arquivo chamado `tsconfig.json` e coloque as seguintes configurações:
+- Execute `tsc --init` para criar arquivo de configuração do Typescript no projeto.
+  - Altere as configurações desse arquivo descomentando linhas ou alterando valores para que os seguintes campos estejam presentes:
 
 ```json
 {
