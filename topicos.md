@@ -44,3 +44,52 @@ add("Bruno ", "Oliveira") // ERRO em tempo de compilação
   - OR (||)
   - Existem diversos outros
   - [Referência](https://dicasdeprogramacao.com.br/operadores-logicos/#:~:text=Os%20operadores%20l%C3%B3gicos%20s%C3%A3o%3A%20E,E%20N%C3%83O%2DOU%2DEXCLUSIVO.)
+
+## Iniciando projeto com Typescript
+
+Siga os passos a seguir para instalação das dependências necessárias.  
+Recomenda-se utilizar sistema Linux ou macOS.
+
+- Instalar `nvm` (Node Version Manager):
+  - [Referência para instalação](https://github.com/nvm-sh/nvm#installing-and-updating)
+  - Executar comando `nvm -v` para verificar instalação
+- Instalar [Node.js](https://nodejs.org/en/about/) utilizando `nvm`:
+  - Executar comando `nvm install node`
+  - Executar comando `node -v` para verificar instalação
+  - Executar comando `npm -v` para verificar instalação
+- Instalar Typescript globalmente:
+  - Executar comando `npm i -g typescript`
+  - Executar comando `tsc -v` para verificar instalação
+- Instalar [Yarn](https://yarnpkg.com/) globalmente:
+  - Executar comando `npm i -g yarn`
+  - Executar comando `yarn -v` para verificar instalação
+
+Após ter instalado essas ferramentas, na raiz desse repositório faça os seguintes passos:
+
+- Execute `yarn init` e aguarde a inicialização (diversos arquivos serão criados)
+- Execute `yarn add --dev typescript`
+- Execute `tsc --init` para criar arquivo de configuração do Typescript no projeto.
+  - Altere as configurações desse arquivo descomentando linhas ou alterando valores para que os seguintes campos estejam presentes:
+
+```json
+{
+    "compilerOptions": {
+        "outDir": "dist",
+        "allowJs": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "resolveJsonModule": true,
+        "noImplicitReturns": true,
+        "esModuleInterop": true,
+        "target": "es6",
+        "module": "commonjs",
+        "baseUrl": "src",
+    },
+    "include": [
+        "./src/**/*"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
+```
