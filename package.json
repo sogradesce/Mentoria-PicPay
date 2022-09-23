@@ -1,0 +1,12 @@
+{
+  "name": "PicPay",
+  "version": "1.0.0",
+  "description": "v1",
+  "main": "index.js",
+  "repository": "https://github.com/sogradesce/Mentoria-PicPay.git",
+  "author": "Brunao <oliveiravr7@outlook.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.8.3"
+  }
+}
