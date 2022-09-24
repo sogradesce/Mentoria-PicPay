@@ -1,5 +1,7 @@
 # Tópicos abordados
 
+## Compilação X Execução e Linguagens tipadas
+
 - Tempo de Compilação X Tempo de Execução
   - Compilar: criar executável
   - Executar: transformação em linguagem de máquina e execução do programa
@@ -93,4 +95,33 @@ Após ter instalado essas ferramentas, na raiz desse repositório faça os segui
     ]
 }
 ```
-// done!!
+
+## GitHub, git e Tipos de Typescript
+
+- git
+  - Principais comandos:
+    - pull: Puxa atualizações do repositório remoto (GitHub) para o repositório local
+    - fetch: Usado para atualizar conteúdos locais com base no repositório remoto (atualiza branches existentes)
+    - add: Adiciona arquivos a serem commitados
+    - commit: Commita os arquivos adicionados, preferencialmente com uma mensagem descritiva
+    - push: Envia os commits locais ao repositório remoto (GitHub)
+    - checkout: Troca de branches
+      - `git checkout -b <nome>` cria uma nova branch com o nome informado
+- GitHub
+  - Boas práticas de commits e PRs
+    - Commits:
+      - Mensagens curtas e descritivas
+      - Quebras do trabalho feito em commits distintos (não fazer um commit "geral")
+      - [Referência sobre padrão das mensagens de commit](https://www.conventionalcommits.org/en/v1.0.0/)
+    - PRs
+      - Descrição das mudanças realizadas
+      - Passo-a-passo de como testar
+      - Listar possíveis impactos causados pelas modificações/inclusões
+  - Source Control do VSCode e/ou GitHub Desktop podem facilitar:
+    - Criação de novas branches
+    - Selecionar arquivos de cada commit
+    - Criação e revisão de PRs
+
+- Tipos comuns utilizados em Typescript
+  - Arquivo `common-types.ts` dessa pasta contém diversos exemplos
+  - A [documentação oficial da linguagem](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html) contém descrições, detalhes e casos de uso
