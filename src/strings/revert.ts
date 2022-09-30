@@ -2,4 +2,4 @@ function reverseStr(s: string) {
     return ""
 }
 
-export {reverseStr}
+export default reverseStr

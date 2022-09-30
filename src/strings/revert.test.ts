@@ -1,12 +1,24 @@
-import { reverseStr } from "./revert"
+import reverseStr from "./revert"
 
 
 describe("Reverse string", () =>{
-    test("empty string", () => {
-        expect(reverseStr("hi")).toBe("")
+    test("String vazia", () => {
+        expect(reverseStr("")).toBe("")
     })
 
-    test("non empty string", () => {
-        expect(reverseStr("hi")).toBe("ih")
+    test("String de um caractere", () => {
+        expect(reverseStr("a")).toBe("a")
+    })
+
+    test("String sem espaços", () => {
+        expect(reverseStr("abcdefg")).toBe("gfedcba")
+    })
+
+    test("String com espaços", () => {
+        expect(reverseStr("oi tudo bem")).toBe("meb odut io")
+    })
+
+    test("Palíndromo", () => {
+        expect(reverseStr("arara")).toBe("arara")
     })
 })
