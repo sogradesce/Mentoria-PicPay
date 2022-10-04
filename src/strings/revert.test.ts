@@ -1,24 +1,23 @@
-import reverseStr from "./revert"
+import reverseStr from "./revert";
 
-
-describe("Reverse string", () =>{
+describe("Reverse string", () => {
     test("String vazia", () => {
-        expect(reverseStr("")).toBe("")
-    })
+        expect(reverseStr("")).toBe("");
+    });
 
     test("String de um caractere", () => {
-        expect(reverseStr("a")).toBe("a")
-    })
+        expect(reverseStr("a")).toBe("a");
+    });
 
     test("String sem espaços", () => {
-        expect(reverseStr("abcdefg")).toBe("gfedcba")
-    })
+        expect(reverseStr("abcdefg")).toBe("gfedcba");
+    });
 
     test("String com espaços", () => {
-        expect(reverseStr("oi tudo bem")).toBe("meb odut io")
-    })
+        expect(reverseStr("oi tudo bem")).toBe("meb odut io");
+    });
 
     test("Palíndromo", () => {
-        expect(reverseStr("arara")).toBe("arara")
-    })
-})
+        expect(reverseStr("arara")).toBe("arara");
+    });
+});

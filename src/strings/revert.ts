@@ -1,5 +1,5 @@
 function reverseStr(s: string) {
-    return ""
+    return "";
 }
 
-export default reverseStr
+export default reverseStr;
