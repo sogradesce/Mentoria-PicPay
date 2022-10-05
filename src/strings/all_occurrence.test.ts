@@ -34,7 +34,9 @@ describe("Find all occurrences of a letter in a string", () => {
     });
 
     test("Espaço em branco existe em string", () => {
-        expect(findAllOccurrences("suco de laranja", " ")).toStrictEqual([4, 7]);
+        expect(findAllOccurrences("suco de laranja", " ")).toStrictEqual([
+            4, 7,
+        ]);
     });
 
     test("Espaço em branco não existe em string", () => {

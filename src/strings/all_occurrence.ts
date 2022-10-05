@@ -10,7 +10,7 @@
         findAllOccurrences("abcd", "x") => []
 */
 function findAllOccurrences(str: string, letter: string): Array<number> {
-    return [0,1,2,3]
+    return [0, 1, 2, 3];
 }
 
 export default findAllOccurrences;

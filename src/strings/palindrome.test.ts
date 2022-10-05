@@ -22,6 +22,8 @@ describe("Checks if string is a palindrome", () => {
     });
 
     test("Palíndromo com espaços", () => {
-        expect(isPalindrome("socorram me subi no onibus em marrocos")).toBe(true);
+        expect(isPalindrome("socorram me subi no onibus em marrocos")).toBe(
+            true,
+        );
     });
 });

@@ -10,7 +10,7 @@
         findFirstOccurrence("abcd", "x") => -1
 */
 function findFirstOccurrence(str: string, letter: string): number {
-    return 0
+    return 0;
 }
 
 export default findFirstOccurrence;
