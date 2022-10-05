@@ -127,7 +127,7 @@ Após ter instalado essas ferramentas, na raiz desse repositório faça os segui
   - Arquivo `common-types.ts` dessa pasta contém diversos exemplos
   - A [documentação oficial da linguagem](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html) contém descrições, detalhes e casos de uso
 
-## Generics e Utility Types
+## Generics, Utility Types e Function Overloads
 
 - Utility Types:
   - Tipos "especiais" do Typescript
@@ -142,3 +142,56 @@ Após ter instalado essas ferramentas, na raiz desse repositório faça os segui
     - Com o tipo `any` não é possível saber o que será retornado por uma função, por exemplo
   - Arquivo `generics.ts` contém exemplo de uso
   - Mais detalhes sobre generics podem ser encontrados [nessa documentação](https://www.typescriptlang.org/docs/handbook/2/generics.html)
+
+- Function Overloads:
+  - Por vezes, queremos que uma mesma função funcionar com tipos e quantidades diferentes de argumentos, ou que tenha tipos diferentes de retorno
+  - A primeira abordagem que vem em mente é criar funções distintas, que recebem parâmetros e têm retornos diferentes
+  - O uso de Function Overloads facilita isso, e torna desnecessária a criação de diversas funções:
+    - Cria a função "principal", com os argumentos a serem recebidos e o tipo a ser retornado
+    - Para cada diferente retorno/argumentos desejados, cria-se apenas o cabeçalho da função
+    - Com isso, dependendo dos argumentos passados e do tipo de retorno, a chamada da função será adaptada para utilizar a função principal ou algum dos cabeçalhos definidos
+  - Exemplo:
+
+```js
+function makeDate(timestamp: number): Date; // Cabeçalho 1
+function makeDate(m: number, d: number, y: number): Date; // Cabeçalho 2
+function makeDate(mOrTimestamp: number, d?: number, y?: number): Date { // Função principal
+  if (d !== undefined && y !== undefined) {
+    return new Date(y, mOrTimestamp, d);
+  } else {
+    return new Date(mOrTimestamp);
+  }
+}
+
+const d1 = makeDate(12345678); // Interpretado como Cabeçalho 1
+const d2 = makeDate(5, 5, 5); // Interpretado como Cabeçalho 2
+const d3 = makeDate(1, 3); // Interpretado como Função principal
+```
+
+## Jest, Prettier e Atualizando dependências de um projeto
+
+- Jest
+  - Framework de testes para Javascript/Typescript
+  - [Documentação oficial](https://jestjs.io/pt-BR/docs/getting-started)
+  - **Para esse projeto** podemos executar todos os testes com o comando `yarn test`
+    - Para executar testes de um arquivo específico: `yarn test -- <nome do arquivo de testes>` dentro da pasta `/src`
+    - Exemplo: `yarn test -- revert.test.ts`
+
+- Prettier
+  - Formatador de código configurável
+  - Pode-se definir formatações padrão de um projeto criando um arquivo de configuração do Prettier
+    - Esse arquivo pode ter diferentes formatos, como: `.prettierrc`, `prettierrc.json` e `prettier.config.js`
+  - Ideal para manter boas práticas e padrões em um projeto
+    - Espaçamentos iguais
+    - Uso de ";"
+    - Tamanho máximo de caracteres por linha
+    - Etc
+  - [Documentação oficial](https://prettier.io/docs/en/index.html)
+  - **Para esse projeto** podemos executar o Prettier com o comando `yarn prettier`
+
+- Atualizando dependências de um projeto
+  - Em projetos com vários desenvolvedores, acontece de um deles instalar alguma dependência necessária para o que está desenvolvendo
+    - Alguma lib com novas funcionalidades, um framework de testes como Jest, um formatador de código como Prettier
+  - Para que o projeto funcione normalmente para todos os contribuidores, é necessário atualizar as dependências:
+    - `yarn install`
+    - Esse comando instala/atualiza todas as dependências de projetos em JS/TS listadas no arquivo `package.json`
