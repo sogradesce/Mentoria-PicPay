@@ -1,6 +1,6 @@
 import reverseStr from "./revert";
 
-describe("Reverse string", () => {
+describe("Revert a string", () => {
     test("String vazia", () => {
         expect(reverseStr("")).toBe("");
     });
