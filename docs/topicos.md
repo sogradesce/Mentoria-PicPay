@@ -117,6 +117,7 @@ Após ter instalado essas ferramentas, na raiz desse repositório faça os segui
       - Descrição das mudanças realizadas
       - Passo-a-passo de como testar
       - Listar possíveis impactos causados pelas modificações/inclusões
+      - Não dar merge em PRs que não foram revisados por outras pessoas
   - Source Control do VSCode e/ou GitHub Desktop podem facilitar:
     - Criação de novas branches
     - Selecionar arquivos de cada commit
@@ -125,3 +126,19 @@ Após ter instalado essas ferramentas, na raiz desse repositório faça os segui
 - Tipos comuns utilizados em Typescript
   - Arquivo `common-types.ts` dessa pasta contém diversos exemplos
   - A [documentação oficial da linguagem](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html) contém descrições, detalhes e casos de uso
+
+## Generics e Utility Types
+
+- Utility Types:
+  - Tipos "especiais" do Typescript
+  - Utilizados para facilitar a transformação de tipos
+  - Arquivos `omit.ts` e `partials.ts` contém exemplos de uso
+  - Todos os utility types podem ser consultados [nessa documentação](https://www.typescriptlang.org/docs/handbook/utility-types.html)
+
+- Generics:
+  - Permite criação de componentes que funcionam com vários tipos distintos
+  - Interessante por possibilitar reusabilidade
+  - É melhor do que usar o tipo `any`
+    - Com o tipo `any` não é possível saber o que será retornado por uma função, por exemplo
+  - Arquivo `generics.ts` contém exemplo de uso
+  - Mais detalhes sobre generics podem ser encontrados [nessa documentação](https://www.typescriptlang.org/docs/handbook/2/generics.html)
