@@ -56,6 +56,8 @@ const users: User[] = [
 export type ApiResponse<T> =
     | { status: 'success'; data: T; }
     | { status: 'error'; error: string; };
+    
+//(response: ApiResponse<number>)
 
 export function requestAdmins(callback: (response: ApiResponse<Admin[]>) => void) {
     callback({
