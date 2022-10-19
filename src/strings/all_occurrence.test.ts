@@ -2,7 +2,7 @@ import findAllOccurrences from "./all_occurrence";
 
 describe("Find all occurrences of a letter in a string", () => {
     test("String vazia existe em string vazia", () => {
-        expect(findAllOccurrences("", "")).toStrictEqual([0]);
+        expect(findAllOccurrences("", "")).toStrictEqual([]);
     });
 
     test("Letra não existe em string vazia", () => {
@@ -10,7 +10,7 @@ describe("Find all occurrences of a letter in a string", () => {
     });
 
     test("Letra existe em string de caracteres iguais", () => {
-        expect(findAllOccurrences("a", "aaaa")).toStrictEqual([0, 1, 2, 3]);
+        expect(findAllOccurrences("aaaa", "a")).toStrictEqual([0, 1, 2, 3]);
     });
 
     test("Letra não existe em string de um caractere", () => {
