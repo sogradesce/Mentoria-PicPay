@@ -195,3 +195,170 @@ const d3 = makeDate(1, 3); // Interpretado como Função principal
   - Para que o projeto funcione normalmente para todos os contribuidores, é necessário atualizar as dependências:
     - `yarn install`
     - Esse comando instala/atualiza todas as dependências de projetos em JS/TS listadas no arquivo `package.json`
+
+## Loops, Arrays e Strings
+
+### Loops (Laços)
+
+- Possibilitam uma maneira fácil e rápida de executar uma ação repetidas vezes
+- O laço mais utilizado é o `for`, mas existem outros como `while` e `do ... while`
+- Laços são comumente utilizados com arrays, objetos ou strings. Esse uso será abordado nos próximos tópicos.
+- Utilizando `for`:
+  - O loop é repetido até que a condição especificada seja falsa
+  - A declaração desse loop tem a seguinte forma: `for ([expressaoInicial]; [condicao]; [incremento])`, onde:
+    - A `expressãoInicial` é inicializada e, caso possível, é executada. Normalmente essa expressão inicializa um ou mais contadores, mas a sintaxe permite expressões de qualquer grau de complexidade. Podendo conter também declaração de variáveis.
+    - A `condicao` é avaliada. caso o resultado de `condicao` seja verdadeiro, o laço é executado. Se o valor de `condicao` é falso, então o laço terminará. Se a expressão `condicao` é omitida, a `condicao` é assumida como verdadeira (loop infinito).
+    - O conteúdo dentro do `for` é, então, executado. Para executar múltiplas declarações, use uma declaração em bloco ({ ... }) para agrupá-las.
+    - A atualização do `incremento`, se houver, executa, e volta-se para o passo de avaliar a `condicao`.
+
+```js
+for (let passo = 0; passo < 5; passo++) {
+  // Executa 5 vezes, com os valores de passos de 0 a 4.
+  console.log('Ande um passo para o leste');
+}
+```
+
+- Outras duas funcionalidades úteis dentro de loops são as chamadas de `break` e `continue`
+- `break`:
+  - Utilizado para terminar um loop, isto é, fazer com que a execução do loop seja encerrada.
+  - Útil em situações como procurar por um elemento ou valor específico e, quando encontrado, não há mais necessidade de continuar no loop.
+
+```js
+let contador = 0
+for (let i = 0; i < 10; i++) {
+  if (contador >= 15) {
+    console.log("Contador possui valor maior ou igual a 15!")
+    break;
+  }
+  contador += i
+}
+```
+
+- `continue`:
+  - Utilizado para passar para a próxima iteração de um loop, ignorando o que é feito após a declaração de `continue`.
+  - Útil em situações nas quais se quer fazer um tratamento para elementos específicos de um array, e ignorar os demais elementos.
+
+```js
+for (let i = 0; i < 6; i++) {
+  if (i < 3) {
+    continue;
+  }
+  console.log("Esse número é maior que três: ", i)
+}
+```
+
+**A referência completa sobre laços e iterações pode ser encontrada [nessa documentação](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Loops_and_iteration#declara%C3%A7%C3%A3o_continue).**
+
+### Arrays
+
+- É uma lista com zero ou mais elementos, representada por `[]`;
+  - `['Maçã', 'Banana']`
+  - `[1, 2, 3, 4, 5]`
+  - `[false, true, true]`
+  - `["Maçã, 1 ,2, false]`
+- Pode-se descobrir o tamanho de um array utilizando a função `length`:
+
+```js
+let frutas = ['Maçã', 'Banana']
+console.log(frutas.length) // 2
+```
+
+- Itens de um array podem ser acessados utilizando seu index:
+  - O index vai de 0 (primeiro elemento) até length - 1 (último elemento).
+
+```js
+let frutas = ['Maçã', 'Banana']
+console.log(frutas[0]) // Maçã
+console.log(frutas[1]) // Banana
+console.log(frutas[frutas.length - 1]) // Banana
+```
+
+- Podemos iterar por um array utilizando loops:
+  - Ideal para fazer alguma lógica que envolve todos os elementos do array, como achar um elemento específico, filtrar elementos ou alterar elementos.
+
+```js
+let a = ["Maçã", "Banana", "Uva", "Abacaxi"]
+let theValue = "Uva"
+for (let i = 0; i < a.length; i++) {
+  if (a[i] == theValue) {
+    console.log("Uva está na lista de frutas!")
+    break;
+  }
+}
+```
+
+- Em JS/TS arrays possuem a função `forEach`, que é uma simplificação do loop `for` descrito no exemplo acima:
+
+```js
+let a = ["Maçã", "Banana", "Uva", "Abacaxi"]
+a.forEach((item, indice) => {
+  console.log(item, indice)
+})
+// Maçã 0
+// Banana 1 
+// Uva 2
+// Abacaxi 3 
+```
+
+- Podemos inserir e remover elementos de um array utilizando algumas funções desse tipo de estrutura:
+  - `push`: Adiciona item no final do array
+  - `pop`: Remove (e retorna) item do final do array
+  - `unshift`: Adiciona item no início do array
+  - `shift`: Remove item do início do array
+
+```js
+let frutas = ['Maçã', 'Banana']
+let adicionarFinal = frutas.push('Laranja');
+// ['Maçã', 'Banana', 'Laranja']
+let ultimo = frutas.pop(); // remove Laranja (do final)
+// ['Maçã', 'Banana'];
+let adicionarInicio = frutas.unshift('Morango') // adiciona ao início
+// ['Morango', 'Banana'];
+var primeiro = frutas.shift(); // remove Maçã do início
+// ['Banana'];
+```
+
+**A referência completa sobre arrays e outras de suas funções pode ser encontrada [nessa documentação](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array).**
+
+### Strings
+
+- Em qualquer linguagem de programação, é uma sequência de caracteres que representa um texto.
+- Strings em JS/TS possuem diversas funções úteis que nos permitem manipular essas estruturas mais facilmente. Alguns exemplos:
+  - [charAt](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/charAt): Retorna o caractere da posição informada.
+  - [endsWith](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith): Indica se uma string termina com os caracteres informados, retornando um booleano.
+  - [replace](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace): Retorna uma nova string, substituindo a primeira ocorrência dos caracteres "antigos" dados como parâmetro pelos "novos".
+
+```js
+// charAt
+let anyString = 'Brave new world'
+console.log(anyString.charAt(0)) // B
+console.log(anyString.charAt(2)) // a
+
+// endsWith
+let str = 'Ser ou não ser, eis a questão'
+console.log(str.endsWith('questão')) // retorna true
+console.log(str.endsWith('ser'))     // retorna false
+console.log(str.endsWith('ser', 14)) // retorna true, nesse caso considera apenas os 14 primeiros caracteres da string
+
+// replace
+let anotherStr = "um dois três quatro seis seis"
+console.log(anotherStr.replace("seis", "cinco")) // 'um dois três quatro cinco seis'
+```
+
+**Uma lista completa dessas funções pode ser encontrada [nessa documentação](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String)**
+
+- Strings podem ser vistas como um array de caracteres
+- Isso é importante pois:
+  - Podemos iterar por uma string usando loops
+  - Podemos saber o tamanho de uma string utilizando a propriedade `length`
+  - Podemos acessar o valor de um caractere na string utilizando a notação `[index]`
+
+```js
+let nome = "Uva"
+for (let i = 0; i < nome.length; i++) {
+  console.log(nome[i])
+}
+// U
+// v
+// a
+```
