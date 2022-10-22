@@ -1,4 +1,5 @@
 import { User } from '../../exercise/exercise-1';
+import findFirstOccurrence from './first_occurrence';
 // Para testar: yarn test -- all_occurrence.test.ts
 
 // findAllOccurrences recebe uma string e uma letra, e deve retornar
@@ -11,21 +12,17 @@ import { User } from '../../exercise/exercise-1';
         findAllOccurrences("abcd", "x") => []
 */
 
-interface Person {
-        FirstName: string;
-        LastName: string;
+interface house {
+    0: 2;
+    1: 3;
 }
 
-function findAllOccurrences(
-    str: string, 
-    letter: string): Array<number> {
+function findAllOccurrences(str: string, letter: string): Array<number> {
     return [0, 1, 2, 3];
 }
 
-declare function name(params:type) {
-    name
-//aguardando tempo para preencher 
-}
-
+let array: number[] = [0, 1, 2, 3];
 
 export default findAllOccurrences;
+console.log(findAllOccurrences);
+

@@ -1,3 +1,4 @@
+
 // Para testar: yarn test -- to_array.test.ts
 
 // toArray recebe uma string 's' e deve retornar um array contendo cada caractere da string.
@@ -10,7 +11,24 @@
         toArray("") => []
 */
 function toArray(s: string): Array<string> {
-    return [];
+
+
+let chico = s
+let informacao: Array<string> = []
+
+for (let i = 0; i < chico.length; i++) {
+if(chico[i] === ' '){
+    informacao.push(chico[i]);
+    } else{
+     informacao.push(chico[i]);
+    }
+  
+  }
+console.log('brubs' ,informacao);
+    return informacao;
+    
 }
+
+// referencia: https://www.scaler.com/topics/javascript/difference-between-double-equals-and-triple-equals-in-javascript/
 
 export default toArray;
