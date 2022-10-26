@@ -19,8 +19,5 @@
     "start": "node dist/index.js",
     "test": "jest",
     "prettier": "prettier --write ./src"
-  },
-  "dependencies": {
-    "applicationinsights": "^2.3.5"
   }
 }

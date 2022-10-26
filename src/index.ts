@@ -1,3 +1,3 @@
-let x = "Chico feliz dev"
+let x = "Chico feliz dev";
 
-console.log(x)
+console.log(x);
