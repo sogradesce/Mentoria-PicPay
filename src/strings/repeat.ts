@@ -9,8 +9,16 @@
         repeatStr("a d ", 3) => "a d a d a d "
         repeatStr("abcd", -4) => ""
 */
-function repeatStr(s: string, times: number): string {
-    return "";
+function repeatStr(s: string, n: number): string {
+    if (n > 0) {
+        let strRepetida = ""
+        for (let i = 0; i < n; i++) {
+            strRepetida = strRepetida + s
+        }
+        return strRepetida
+    }
+
+    return ""
 }
 
 export default repeatStr;
