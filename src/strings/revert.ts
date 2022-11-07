@@ -9,7 +9,7 @@ function reverseStr(s: string): string {
     }
 
     let revertido = info.reverse();
-    
+
     let textoRevertido = "";
     for (let i = 0; i < revertido.length; i++) {
         textoRevertido += revertido[i];
