@@ -362,3 +362,55 @@ for (let i = 0; i < nome.length; i++) {
 // v
 // a
 ```
+
+## Testes
+
+### Motivação
+
+- Sistemas de software são complexos (milhares de linhas de código, métodos, classes, etc.)
+- Todo software evolui para acomodar mudanças
+- Manutenção e evolução de um software podem inserir erros ou comportamentos inesperados
+
+Com isso, para evitar que problemas ocorram e chegem nos usuários finais, é fundamental introduzir atividades de testes de software.
+Alguns dos benefícios dessa prática são:
+
+- Prevenção de erros
+  - Bons testes ajudam na detecção de bugs mais cedo no ciclo de desenvolvimento
+  - Verificam tanto os comportamentos triviais como exceções (corner cases)
+  - **É válido lembrar: por melhor que sejam os testes, eles não garantem que o sistema está livre de bugs.** Geralmente o espaço de possíveis entradas para testes é muito grande, não sendo possível testar todas as possibilidades
+- Aumento da produtividade
+  - Com um conjunto de testes bem estruturado, devs podem alterar o software com mais confiança (suporte à capacidade de mudança)
+  - Testes são úteis também como documentação do código
+  - Facilitam a revisão e depuração, permitindo releases mais rápidas e com mais qualidade
+- Melhora do projeto do sistema
+  - Quando o código é difícil de ser testado, isso é um indicativo que o código possui algum problema de projeto
+    - Muitas dependências: difícil testar, pois tais dependências também devem ser criadas dentro dos testes, tornando-os mais complexos
+    - Múltiplas responsabilidades: testes serão mais genéricos e menos focados para cobrir as diversas responsabilidades existentes
+
+### Tipos
+
+Nesse tópico serão tratados os principais tipos de testes **automatizados.** Testes manuais são lentos, caros e suscetíveis a falhas (uma vez que são realizados manualmente), logo são menos utilizados no dia-a-dia do que testes automatizados.
+Os testes automatizados, por sua vez, são pequenos programas que chamam outros programas que desejamos testar e verificam se eles retornam os valores esperados, tendo como grande vantagem a possibilidade de serem executados diversas vezes devido à sua velocidade de execução.
+
+![Pirâmide de testes](tst_pyramid.png)
+
+- Testes de Unidade
+  - Verificam automaticamente pequenas unidades do código (métodos, classes, etc.)
+  - São os testes mais comuns em um sistema
+  - Devem ser pequenos, estáveis, simples de escrever e ter baixo tempo de execução
+
+![Testes de unidade](tst_unid.png)
+
+- Testes de Integração
+  - Verificam a interação entre componentes ou uma funcionalidade completa do sistema (separada da UI)
+  - Usualmente envolvem comunicação com serviços externos (APIs, bancos de dados, sistemas de arquivos)
+  - Mais lentos, caros e menos frequentes que testes de unidade
+
+![Testes de integração](tst_integ.png)
+
+- Testes de Sistema (e2e)
+  - Simulam o uso do sistema por usuários reais
+  - São normalmente realizados na UI do sistema
+  - Mais lentos, caros e menos frequentes que testes de integração
+
+![Testes de sistema](tst_e2e.png)

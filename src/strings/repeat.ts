@@ -11,14 +11,14 @@
 */
 function repeatStr(s: string, n: number): string {
     if (n > 0) {
-        let strRepetida = ""
+        let strRepetida = "";
         for (let i = 0; i < n; i++) {
-            strRepetida = strRepetida + s
+            strRepetida = strRepetida + s;
         }
-        return strRepetida
+        return strRepetida;
     }
 
-    return ""
+    return "";
 }
 
 export default repeatStr;
