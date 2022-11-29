@@ -9,3 +9,5 @@ Referencias para criar o trabalho
 # https://lucasmagnum.medium.com/iniciando-em-go-6a34d200f02c 
 
 # https://www.digitalocean.com/community/tutorials/how-to-write-your-first-program-in-go-pt
+
+Esqueci de criar uma nova br :risos:
