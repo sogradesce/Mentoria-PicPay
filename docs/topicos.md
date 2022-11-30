@@ -365,6 +365,8 @@ for (let i = 0; i < nome.length; i++) {
 
 ## Testes
 
+[Referência](https://engsoftmoderna.info/cap8.html)
+
 ### Motivação
 
 - Sistemas de software são complexos (milhares de linhas de código, métodos, classes, etc.)
@@ -392,25 +394,59 @@ Alguns dos benefícios dessa prática são:
 Nesse tópico serão tratados os principais tipos de testes **automatizados.** Testes manuais são lentos, caros e suscetíveis a falhas (uma vez que são realizados manualmente), logo são menos utilizados no dia-a-dia do que testes automatizados.
 Os testes automatizados, por sua vez, são pequenos programas que chamam outros programas que desejamos testar e verificam se eles retornam os valores esperados, tendo como grande vantagem a possibilidade de serem executados diversas vezes devido à sua velocidade de execução.
 
-![Pirâmide de testes](tst_pyramid.png)
+![Pirâmide de testes](images/tst_pyramid.png)
 
 - Testes de Unidade
   - Verificam automaticamente pequenas unidades do código (métodos, classes, etc.)
   - São os testes mais comuns em um sistema
   - Devem ser pequenos, estáveis, simples de escrever e ter baixo tempo de execução
 
-![Testes de unidade](tst_unid.png)
+![Testes de unidade](images/tst_unid.png)
 
 - Testes de Integração
   - Verificam a interação entre componentes ou uma funcionalidade completa do sistema (separada da UI)
   - Usualmente envolvem comunicação com serviços externos (APIs, bancos de dados, sistemas de arquivos)
   - Mais lentos, caros e menos frequentes que testes de unidade
 
-![Testes de integração](tst_integ.png)
+![Testes de integração](images/tst_integ.png)
 
 - Testes de Sistema (e2e)
   - Simulam o uso do sistema por usuários reais
   - São normalmente realizados na UI do sistema
   - Mais lentos, caros e menos frequentes que testes de integração
 
-![Testes de sistema](tst_e2e.png)
+![Testes de sistema](images/tst_e2e.png)
+
+### Princípios FIRST
+
+FIRST é um acrônimo de cinco características que testes de unidade devem possuir:
+
+- **F**ast (Rápidos):
+  - Testes de unidade devem ser executados frequentemente para obtenção rápida de feedback (s ou ms)
+  - Caso existam testes mais demorados, é ideal a divisão do conjunto de testes em dois grupos: os que são executados rapidamente e os mais demorados
+- **I**ndependent (Independentes):
+  - A ordem de execução dos testes de unidade não deve influenciar nos resultados dos testes
+- **R**epeatable (Determinísticos):
+  - Testes de unidade devem sempre ter o mesmo resultado, de forma a garantir que de bugs introduzidos no código serão devidamente identificados
+  - Testes não-determinísticos são conhecidos como *Flaky* (ou Erráticos)
+- **S**elf-checking (Auto-verificáveis):
+  - Resultados de testes de unidade devem ser facilmente verificáveis
+  - Não é ideal que um desenvolvedor tenha que abrir e analisar arquivos de saída dos testes ou fornecer dados manualmente
+- **T**imely (Escritos o quanto antes):
+  - Quanto mais cedo no desenvolvimento de um projeto os testes de unidade sejam escritos, é mais provável que o sistema possua testes significativos e que validam uma maior parcela do sistema e de suas funcionalidades
+
+### TDD
+
+No Desenvolvimento Dirigido por Testes (*Test Driven Development* - TDD) o desenvolvedor primeiramente escreve o teste de unidade da classe ou método que será implementado, e só depois implementa a classe/método. Esse modelo de desenvolvimento é interessante pois:
+
+- Ajuda a evitar que desenvolvedores esqueçam de escrever testes
+- Favorece a escrita de código com alta testabilidade
+- É uma prática que também é relacionada com a melhoria do design de um sistema
+
+O ciclo de desenvolvimento com TDD é dividido em três etapas:
+
+![Ciclo TDD](images/ciclos-tdd.svg)
+
+- De acordo com esse diagrama, a primeira meta é chegar no estado vermelho, quando o teste ainda não está passando. Pode parecer estranho, mas o estado vermelho já é uma pequena vitória: ao escrever um teste que falha, o desenvolvedor pelo menos tem em mãos uma especificação da classe que ele precisará implementar em seguida. Ou seja, ele já sabe o que tem que fazer. Conforme já mencionamos, nesse estado, é importante que o desenvolvedor pense também na interface da classe que ele terá que implementar, colocando-se na posição de um usuário da mesma. Por fim, é importante que ele entregue o código compilando. Para isso, ele deve escrever pelo menos o esqueleto da classe sob teste, isto é, a assinatura da classe e de seus métodos
+- Em seguida, a meta é alcançar o estado verde. Para isso, deve-se implementar a funcionalidade completa da classe sob teste; quando isso ocorrer, os testes que estavam falhando vão começar a passar. No entanto, pode-se dividir essa implementação em pequenos passos. Talvez, nos passos iniciais, o código estará funcionando de forma parcial, por exemplo, retornando apenas constantes. Isso ficará mais claro no exemplo que daremos a seguir
+- Por fim, deve-se analisar se existem oportunidades para refatorar o código da classe e do teste. Quando se usa TDD, o objetivo não é apenas alcançar o estado verde, no qual o programa está funcionando. Além disso, deve-se verificar a possibilidade de melhorar a qualidade do projeto do código. Por exemplo, verificar se não existe código duplicado, se não existem métodos muito longos que possam ser quebrados em métodos menores, se algum método pode ser movido para uma classe diferente, etc. Terminado o passo de refatoração, podemos parar ou então reiniciar o ciclo, para implementar mais alguma funcionalidade
