@@ -18,6 +18,8 @@ function isPalindrome(s: string): boolean {
     return false;
 }
 
+
+
 // https://howtodoinjava.com/typescript/equals-vs-strict-equals/
 // https://twitter.com/glaucia_lemos86/status/1362153943393071106
 
