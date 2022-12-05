@@ -26,3 +26,5 @@ function searchInsert(nums: number[], target: number): number {
     }
     return head;
   }
+
+  // att para subir ao GIT
