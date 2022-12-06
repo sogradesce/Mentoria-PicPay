@@ -1,0 +1,1 @@
+import contador from "./contador";

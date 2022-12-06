@@ -11,13 +11,13 @@ Exemplo:
 
 ```js
 {
-    "a": 2,
+    "a": 1,
     "melhor": 1,
     "forma": 1,
     "para": 2,
     "começar": 1,
     "bem": 2,
-    "o": 2,
+    "o": 1,
     "dia": 1,
     "e": 1,
     "desejando": 1,
