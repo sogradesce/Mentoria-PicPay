@@ -1,0 +1,5 @@
+Fala Brunão
+Esse programa tá lendo esse aquivo aqui
+Então, desse jeito, não precisa ficar colocando os dados na mão
+toda vez que for rodar a parada
+pra testar se está funcionando direito
