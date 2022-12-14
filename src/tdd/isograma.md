@@ -4,9 +4,9 @@ Isograma é uma palavra ou frase que não possui letras repetidas. Caracteres es
 
 Exemplos:
 
-- lumberjacks
-- background
-- downstream
-- six-year-old
+-   lumberjacks
+-   background
+-   downstream
+-   six-year-old
 
 Implemente uma função que recebe uma string e retorna true caso ela seja um isograma, e false caso contrário.
