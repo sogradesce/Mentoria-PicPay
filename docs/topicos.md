@@ -124,7 +124,7 @@ Após ter instalado essas ferramentas, na raiz desse repositório faça os segui
     - Criação e revisão de PRs
 
 - Tipos comuns utilizados em Typescript
-  - Arquivo `common-types.ts` dessa pasta contém diversos exemplos
+  - Arquivo `docs/code/ts/common-types.ts` dessa pasta contém diversos exemplos
   - A [documentação oficial da linguagem](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html) contém descrições, detalhes e casos de uso
 
 ## Generics, Utility Types e Function Overloads
@@ -132,7 +132,7 @@ Após ter instalado essas ferramentas, na raiz desse repositório faça os segui
 - Utility Types:
   - Tipos "especiais" do Typescript
   - Utilizados para facilitar a transformação de tipos
-  - Arquivos `omit.ts` e `partials.ts` contém exemplos de uso
+  - Arquivos `docs/code/ts/omit.ts` e `docs/code/ts/partials.ts` contém exemplos de uso
   - Todos os utility types podem ser consultados [nessa documentação](https://www.typescriptlang.org/docs/handbook/utility-types.html)
 
 - Generics:
@@ -140,7 +140,7 @@ Após ter instalado essas ferramentas, na raiz desse repositório faça os segui
   - Interessante por possibilitar reusabilidade
   - É melhor do que usar o tipo `any`
     - Com o tipo `any` não é possível saber o que será retornado por uma função, por exemplo
-  - Arquivo `generics.ts` contém exemplo de uso
+  - Arquivo `docs/code/ts/generics.ts` contém exemplo de uso
   - Mais detalhes sobre generics podem ser encontrados [nessa documentação](https://www.typescriptlang.org/docs/handbook/2/generics.html)
 
 - Function Overloads:
@@ -450,3 +450,13 @@ O ciclo de desenvolvimento com TDD é dividido em três etapas:
 - De acordo com esse diagrama, a primeira meta é chegar no estado vermelho, quando o teste ainda não está passando. Pode parecer estranho, mas o estado vermelho já é uma pequena vitória: ao escrever um teste que falha, o desenvolvedor pelo menos tem em mãos uma especificação da classe que ele precisará implementar em seguida. Ou seja, ele já sabe o que tem que fazer. Conforme já mencionamos, nesse estado, é importante que o desenvolvedor pense também na interface da classe que ele terá que implementar, colocando-se na posição de um usuário da mesma. Por fim, é importante que ele entregue o código compilando. Para isso, ele deve escrever pelo menos o esqueleto da classe sob teste, isto é, a assinatura da classe e de seus métodos
 - Em seguida, a meta é alcançar o estado verde. Para isso, deve-se implementar a funcionalidade completa da classe sob teste; quando isso ocorrer, os testes que estavam falhando vão começar a passar. No entanto, pode-se dividir essa implementação em pequenos passos. Talvez, nos passos iniciais, o código estará funcionando de forma parcial, por exemplo, retornando apenas constantes. Isso ficará mais claro no exemplo que daremos a seguir
 - Por fim, deve-se analisar se existem oportunidades para refatorar o código da classe e do teste. Quando se usa TDD, o objetivo não é apenas alcançar o estado verde, no qual o programa está funcionando. Além disso, deve-se verificar a possibilidade de melhorar a qualidade do projeto do código. Por exemplo, verificar se não existe código duplicado, se não existem métodos muito longos que possam ser quebrados em métodos menores, se algum método pode ser movido para uma classe diferente, etc. Terminado o passo de refatoração, podemos parar ou então reiniciar o ciclo, para implementar mais alguma funcionalidade
+
+## Programação Orientada a Objetos (OOP)
+
+- [Playlist - Aulas sobre POO](https://www.youtube.com/watch?v=tHXO_j4RfGw&list=PLxI8Can9yAHewZWSrlhpId71bk5N_W7W1)
+- [Video - Intro to Object Oriented Programming](https://www.youtube.com/watch?v=SiBw7os-_zI)
+- [POO: o que é programação orientada a objetos?](https://www.alura.com.br/artigos/poo-programacao-orientada-a-objetos)
+- [Os 4 pilares da Programação Orientada a Objetos](https://www.devmedia.com.br/os-4-pilares-da-programacao-orientada-a-objetos/9264)
+- [4 Pillars of Object-oriented Programming with TypeScript](https://betterprogramming.pub/understand-object-oriented-programming-with-typescript-c4ff8afa40d)
+
+### SOLID

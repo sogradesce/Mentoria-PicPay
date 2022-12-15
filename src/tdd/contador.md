@@ -1,13 +1,12 @@
 # Instruções
 
-Dado uma frase, retorne um objeto que informa quantas vezes cada palavra apareceu na frase.
-Não deve-se levar em conta diferenças entre letras maísculas e minúsculas, e nem caracteres especiais.
+Dado uma frase, retorne um objeto que informa quantas vezes cada palavra apareceu na frase. Não deve-se levar em conta diferenças entre letras maísculas e minúsculas, e nem caracteres especiais.
 
 Exemplo:
 
-- Entrada: "A melhor forma para começar bem o dia, é desejando o bem para outra pessoa."
+-   Entrada: "A melhor forma para começar bem o dia, é desejando o bem para outra pessoa."
 
-- Saída:
+-   Saída:
 
 ```js
 {
