@@ -1,2 +1,1 @@
 import paridade from "./paridade";
-
