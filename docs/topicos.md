@@ -457,6 +457,7 @@ O ciclo de desenvolvimento com TDD é dividido em três etapas:
 - [Video - Intro to Object Oriented Programming](https://www.youtube.com/watch?v=SiBw7os-_zI)
 - [POO: o que é programação orientada a objetos?](https://www.alura.com.br/artigos/poo-programacao-orientada-a-objetos)
 - [Os 4 pilares da Programação Orientada a Objetos](https://www.devmedia.com.br/os-4-pilares-da-programacao-orientada-a-objetos/9264)
+- [Princípios de projeto](https://engsoftmoderna.info/cap5.html)
 - [4 Pillars of Object-oriented Programming with TypeScript](https://betterprogramming.pub/understand-object-oriented-programming-with-typescript-c4ff8afa40d)
 
 ### SOLID
