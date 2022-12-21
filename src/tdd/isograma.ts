@@ -1,9 +1,8 @@
-function isograma(string) {
+function isIsograma(
+  
 
-        if (string !== '-') {
-          callback(string);
-        }}
-
-
+  
 
 export default isograma;
+
+//
