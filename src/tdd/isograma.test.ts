@@ -1,16 +1,32 @@
 import isograma from "./isograma";
 
-// ainda é muito cedo para perguntar mas eu posso usar ;?
-//pow mano, uma duvida aqui no teste isograma.md- jest tdd
+describe("Testes Isograma", () => {
+    test("String vazia", () => {
+        expect(isograma("")).toBe("");
+    });
 
-//como eu tenho que passar um argumento especifico..
+    test("String com (-)", () => {
+        expect(isograma("-")).toBe("-");
+    });
 
-//Implemente uma função que recebe uma string e retorna true caso ela seja um isograma, e false caso contrário.
+    test("String sem espaços", () => {
+        expect(isograma("lumberjacksL")).toBe("lumberjacksL");
+    });
 
-//a melhor chamada seria...?
+    test("String sem espaços", () => {
+        expect(isograma("background")).toBe("background");
+    });
+    
+    test("String sem espaços", () => {
+        expect(isograma("downstream")).toBe("downstream");
+    });
 
-//#.toHaveBeenCalledWith(exm1, exm2...)
+    test("String sem espaços", () => {
+        expect(isograma("six year old")).toBe("six year old");
+    });
 
-// ai eu colocaria os critérios propostos no exercicio criando para cada um deles?
+});
 
-//fonte: vozes da cabeça: https://jestjs.io/pt-BR/docs/expect#tohavebeencalledwitharg1-arg2-
+// teste para implementar (teste do teste)
+// desenhei no caderno e to passando para o VS, acho que pode dar bom
+// subi esse repo só para vc ver com q estou fazendo
