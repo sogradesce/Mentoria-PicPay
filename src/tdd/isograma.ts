@@ -1,11 +1,17 @@
-function isograma(): boolean {
+function isograma(s: string): boolean {
 
-    let verdadeiroBo: boolean[] = [" ", "-", "lumberjacksL", "background", "downstream", "six-year-old"]
-    const resultado = s.replaceAll("-", " ");
+    const buscaPalavra = s.length;
+    if (buscaPalavra > 10) {
 
-    "TA CHOVENDO BUG";
+    let letraComEsp = s.replaceAll("-","")
+    letraComEsp = letraComEsp.replaceAll("-","")
     
+    return true;
 }
+return false;
+
+}
+    
 export default isograma;
 
-//eu to tendo mto dificuldade para entender como irei passar uma boolean para string
+//eu fiquei calvo, por ser simples fiquei feliz com o resultado, obrigado pela ajuda :)

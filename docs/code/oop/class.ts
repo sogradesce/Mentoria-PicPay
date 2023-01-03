@@ -4,24 +4,24 @@ class Car {
     public model: string;
     public color: string;
     public isElectric: boolean;
-    private password: string
+    private password: string;
 
     constructor(model: string, color: string, isElectric: boolean) {
         this.model = model;
         this.color = color;
         this.isElectric = isElectric;
-        this.password = "função que gera senha"
+        this.password = "função que gera senha";
     }
 
     public drive(pwd: string): void {
         if (pwd === this.password) {
             const engineStarted: boolean = this.startEngine();
-    
+
             if (this.isElectric && engineStarted) {
                 console.log("Dirigindo sozinho para o local de destino");
                 return;
             }
-    
+
             console.log("Acelera e vamo");
         }
     }
@@ -33,8 +33,8 @@ class Car {
     }
 }
 
-const carro1 = new Car("fusca", "azul", false)
-carro1.color
+const carro1 = new Car("fusca", "azul", false);
+carro1.color;
 
 // Abstração
 abstract class CharacterAbs {
@@ -61,23 +61,21 @@ class GoblinAbs extends CharacterAbs {
     }
 }
 
-const goblin = new GoblinAbs("asdf", 123, 321)
+const goblin = new GoblinAbs("asdf", 123, 321);
 
 class OrcAbs extends CharacterAbs {
     constructor(damage: number, speed: number) {
-        const name = "Marcelo"
+        const name = "Marcelo";
         super(name, damage, speed);
     }
 
     public damagePerSecond(): number {
-        return this.damage * this.attackSpeed/2;
+        return (this.damage * this.attackSpeed) / 2;
     }
 }
 
-const orc = new OrcAbs(9000, 2)
-orc.attackSpeed
-
-
+const orc = new OrcAbs(9000, 2);
+orc.attackSpeed;
 
 // Encapsulação
 class CharacterEncaps {
@@ -97,9 +95,8 @@ class CharacterEncaps {
     }
 }
 
-let encaps = new CharacterEncaps("Marcel")
-encaps.set_name("asdfasdfasdfasd")
-
+let encaps = new CharacterEncaps("Marcel");
+encaps.set_name("asdfasdfasdfasd");
 
 // Herança
 class OrcInherit {
@@ -116,8 +113,8 @@ class OrcInherit {
     }
 }
 
-const orc1 = new OrcInherit("Carlos", 123)
-orc1.talk()
+const orc1 = new OrcInherit("Carlos", 123);
+orc1.talk();
 
 class OrcPequenoInherit extends OrcInherit {
     public weapon: string;
@@ -133,13 +130,18 @@ class OrcPequenoInherit extends OrcInherit {
     }
 }
 
-const orcPequeno = new OrcPequenoInherit("Carlinhos", 12, "Machado")
-orcPequeno.attack()
+const orcPequeno = new OrcPequenoInherit("Carlinhos", 12, "Machado");
+orcPequeno.attack();
 
 class OrcPequenoDasMontasInherit extends OrcPequenoInherit {
     public ehPeludo: boolean;
 
-    constructor(name: string, damage: number, weapon: string, ehPeludo: boolean) {
+    constructor(
+        name: string,
+        damage: number,
+        weapon: string,
+        ehPeludo: boolean,
+    ) {
         super(name, damage, weapon);
 
         this.ehPeludo = ehPeludo;
@@ -150,7 +152,12 @@ class OrcPequenoDasMontasInherit extends OrcPequenoInherit {
     }
 }
 
-const orcPDM = new OrcPequenoDasMontasInherit("Carlinhos neto", 1, "Clava", true)
+const orcPDM = new OrcPequenoDasMontasInherit(
+    "Carlinhos neto",
+    1,
+    "Clava",
+    true,
+);
 
 // Polimorfismo
 class CharacterPolimorf {
