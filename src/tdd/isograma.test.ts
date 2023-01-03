@@ -2,30 +2,28 @@ import isograma from "./isograma";
 
 describe("Testes Isograma", () => {
     test("Retorne true ou false para vazia", () => {
-
-        expect(isograma("")).toThrow("");
+        expect(isograma("")).toBe(true);
     });
 
     test("True ou false com (-)", () => {
-        expect(isograma("-")).toThrow("-");
+        expect(isograma("-")).toBe(false);
     });
 
     test("True ou false sem espaços", () => {
-        expect(isograma("lumberjacksL")).toThrow("lumberjacksL");
+        expect(isograma("lumberjacksL")).toBe(true);
     });
 
     test("True ou false sem espaços", () => {
-        expect(isograma("background")).toThrow("background");
-    });
-    
-    test("True ou false sem espaços", () => {
-        expect(isograma("downstream")).toThrow("downstream");
+        expect(isograma("background")).toBe(true);
     });
 
     test("True ou false sem espaços", () => {
-        expect(isograma("six year old")).toThrow("six year old");
+        expect(isograma("downstream")).toBe(true);
     });
 
+    test("True ou false sem espaços", () => {
+        expect(isograma("six year old")).toBe(true);
+    });
 });
 
 // teste para implementar (teste do teste)
