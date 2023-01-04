@@ -10,7 +10,7 @@ describe("Testes Isograma", () => {
     });
 
     test("True ou false sem espaços", () => {
-        expect(isograma("-   lumberjacksL")).toBe(true);
+        expect(isograma("-   lumberjacksL")).toBe(false);
     });
 
     test("True ou false sem espaços", () => {
