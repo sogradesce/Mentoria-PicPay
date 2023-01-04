@@ -1,4 +1,5 @@
 function isograma(s: string): boolean {
+
     const buscaPalavra = s.length;
 
     let lumberLetra = "L";
