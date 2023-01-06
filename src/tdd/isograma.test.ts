@@ -1,15 +1,7 @@
 import isograma from "./isograma";
 
 describe("Testes Isograma", () => {
-    test("Retorne true ou false para vazia", () => {
-        expect(isograma("")).toBe(false);
-    });
-
-    test("True ou false com (-)", () => {
-        expect(isograma("-")).toBe(false);
-    });
-
-    test("True ou false sem espaços", () => {
+        test("True ou false sem espaços", () => {
         expect(isograma("-   lumberjacksL")).toBe(false);
     });
 

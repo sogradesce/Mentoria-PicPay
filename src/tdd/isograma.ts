@@ -1,21 +1,24 @@
-function isograma(s: string): boolean {
+   function isograma(s: string): boolean {
 
-    const buscaPalavra = s.length;
-
-    let lumberLetra = "L";
-    for (let i = s.length - 1; i >= 0; i--) {
-        lumberLetra = lumberLetra + s[i];
-
-        return true;
-    }
-
-    if (buscaPalavra > 10) {
+        
+   
         let letraComEsp = s.replaceAll("-", "");
-        letraComEsp = letraComEsp.replaceAll("-", "");
+            letraComEsp = letraComEsp.replaceAll(" ", "");
+        // remove caracteres "-" e ""
 
-        return true;
-    }
-    return false;
-}
+        let vistos: Array<string> = [];
+        for (let i = 0; i < s.length; i++) {
+        vistos.push(s[i]);
+        // objeto vistos esta armazenando cada informação da string do teste
+        // for loop 
+    
+        if (vistos.length > 1)
+            return false
+            //se a primeira letra existe na string declarada
+        else (vistos.length < -1);
+        
+
+    return true;
+}}
 
 export default isograma;
