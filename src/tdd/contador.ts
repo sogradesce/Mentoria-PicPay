@@ -10,4 +10,4 @@ function contador(frase: any, letraProcurada: any) {
 
 export default contador;
 
-//estou ainda desvendando este misterio
+

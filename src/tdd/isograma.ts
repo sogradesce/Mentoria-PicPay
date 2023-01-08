@@ -1,24 +1,18 @@
-   function isograma(s: string): boolean {
+type Vistos = {
+    [key: string]: boolean;
+};
+function isograma(s: string): boolean {
+    let letraComEsp = s.replaceAll("-", "");
+    letraComEsp = letraComEsp.replaceAll(" ", "");
 
-        
-   
-        let letraComEsp = s.replaceAll("-", "");
-            letraComEsp = letraComEsp.replaceAll(" ", "");
-        // remove caracteres "-" e ""
+    const letrasPalavras = "";
 
-        let vistos: Array<string> = [];
-        for (let i = 0; i < s.length; i++) {
-        vistos.push(s[i]);
-        // objeto vistos esta armazenando cada informação da string do teste
-        // for loop 
-    
-        if (vistos.length > 1)
-            return false
-            //se a primeira letra existe na string declarada
-        else (vistos.length < -1);
-        
-
+    let olhados: Vistos = {};
+    for (let i = 0; i < letrasPalavras.length; i++) {
+        const letra = letrasPalavras[i];
+        olhados[letrasPalavras] = false;
+    }
     return true;
-}}
+}
 
 export default isograma;
