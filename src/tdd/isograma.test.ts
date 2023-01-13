@@ -17,8 +17,3 @@ describe("Testes Isograma", () => {
         expect(isograma("-   six-year-old")).toBe(true);
     });
 });
-
-// teste para implementar (teste do teste)
-// desenhei no caderno e to passando para o VS, acho que pode dar bom
-// subi esse repo só para vc ver com q estou fazendo
-// criando função baseado no teste.
