@@ -4,7 +4,7 @@ Isograma é uma palavra ou frase que não possui letras repetidas. Caracteres es
 
 Exemplos:
 
--   lumberjacks
+-   lumberjacksL
 -   background
 -   downstream
 -   six-year-old
